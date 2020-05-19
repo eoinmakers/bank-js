@@ -1,9 +1,10 @@
 class Account {
-  constructor(transactionClass = Transaction) {
+  constructor(transactionClass = Transaction, printer = new StatementPrinter) {
     const STARTING_BALANCE = 0;
 
     this.balance = STARTING_BALANCE;
     this.transactionClass = transactionClass;
+    this.printer = printer
     this.transactionHistory = [];
   }
 
@@ -28,11 +29,7 @@ class Account {
   }
 
   statement() {
-    const STATEMENT_HEADER = "date || credit || debit || balance \n";
-    let statementRows = this.transactionHistory.map((transaction) => {
-      return transaction.display()
-    })
-    return STATEMENT_HEADER + statementRows.join("\n")
+    return this.printer.print(this.transactionHistory);
   }
 
   addTransaction(obj) {

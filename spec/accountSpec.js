@@ -30,7 +30,23 @@ describe("Account", () => {
 
       expect(account.deposit(10.50)).toEqual(
         "10.50 deposited. Current balance: 10.50"
-      );
+        );
+      });
+    });
+    
+    describe('.withdraw', () => {
+      it("reduces balance by 100 when passed 100", () => {
+        const account = accountWith1000Deposited();
+        
+        expect(account.withdraw(100)).toEqual(
+          "100.00 withdrawn. Current balance: 900.00"
+      ); 
     });
   });
 });
+
+function accountWith1000Deposited() {
+  let account = new Account()
+  account.deposit(1000)
+  return account
+}

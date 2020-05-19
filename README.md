@@ -16,6 +16,7 @@ It allows you to create an account, deposit funds into it, withdraw funds from i
   - [User Stories](#user-stories)
   - [Set up](#set-up)
   - [Deposits](#deposits)
+  - [Withdrawals](#withdrawals)
 
 ## Spec
 
@@ -177,7 +178,15 @@ Refactors:
 - Extracted the operation used to convert the amount to pence into a new method, `toPence`.
 - Moved the extracted methods to their own file, `src/conversion.js`.
 
+### Withdrawals
 
+- [ ] 3
+
+> As a Customer,  
+> So I can spend my money,  
+> I want to be able to withdraw from my account
+
+Wrote test for withdrawing 100 from an account with 1000, returned string has balance: 900
 
 <!-- Links -->
 

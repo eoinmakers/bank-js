@@ -95,12 +95,12 @@ describe("Account", () => {
   describe("uses StatementPrinter class", () => {
     it("statement calls StatementPrinter.print", () => {
       let Mock = {
-          print: function(){}
+        print: function () {},
       };
       spyOn(Mock, "print");
       const account = new Account(Transaction, Mock);
 
-      account.statement()
+      account.statement();
       expect(Mock.print).toHaveBeenCalled();
     });
   });

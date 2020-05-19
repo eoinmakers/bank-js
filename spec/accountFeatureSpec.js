@@ -24,9 +24,9 @@ describe("Account Feature", () => {
       "10/01/2012 || 1000.00 || || 1000.00 ",
     ].join("\n");
 
-    spyOn(console, 'log')
+    spyOn(console, "log");
 
-    account.statement()
+    account.statement();
 
     expect(console.log).toHaveBeenCalledWith(statement);
 

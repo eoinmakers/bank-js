@@ -1,5 +1,5 @@
 class Transaction {
-  constructor({credit = null, debit = null, balance = null} = {}) {
+  constructor({ credit = null, debit = null, balance = null } = {}) {
     this.date = new Date();
     this.credit = credit;
     this.debit = debit;
@@ -11,8 +11,8 @@ class Transaction {
       this._dateFormat(),
       this._render(this.credit),
       this._render(this.debit),
-      this._render(this.balance)
-    ].join("|| ")
+      this._render(this.balance),
+    ].join("|| ");
   }
 
   _dateFormat() {

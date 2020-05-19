@@ -28,7 +28,7 @@ class Account {
   }
 
   _transactionMessage(amount, action) {
-    let currentBalance = asPounds(this.balance)
+    let currentBalance = asPounds(this.balance);
     let pounds = asPounds(amount);
     return `${pounds} ${action}. Current balance: ${currentBalance}`;
   }

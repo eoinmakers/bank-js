@@ -11,6 +11,7 @@ It allows you to create an account, deposit funds into it, withdraw funds from i
   - [Requirements](#requirements)
   - [Acceptance criteria](#acceptance-criteria)
 - [Quick Start](#quick-start)
+- [Dependencies](#dependencies)
 - [Development Journal](#development-journal)
   - [Domain Modelling](#domain-modelling)
   - [User Stories](#user-stories)
@@ -47,6 +48,12 @@ date || credit || debit || balance
 ## Quick Start
 
 _Coming soon_
+
+## Dependencies
+
+[Jasmine] is used as a test framework.
+
+[Moment.js] is used to help convert date objects into formatted strings. It is quite a small library when minified, and I have included a local copy in `src/moment.min.js`.
 
 ## Development Journal
 
@@ -90,7 +97,7 @@ CRC modelling:
 > So I can keep on top of my finances,  
 > I want to be able to print my account statement
 
-- [ ] 4.1
+- [x] 4.1
 
 > As a Customer,  
 > So I know when each transaction happened,  
@@ -226,7 +233,7 @@ The best way to solve this feature is to implement a Transaction class.
 
 ### Transactions
 
-- [ ] 4.1
+- [x] 4.1
 
 > As a Customer,  
 > So I know when each transaction happened,  
@@ -234,8 +241,24 @@ The best way to solve this feature is to implement a Transaction class.
 
 In `spec/transactionSpec.js` wrote a test for the `display` method of the `Transaction` class to return a formatted string, with the formatted date in the first column. Red.
 
+In `src/transaction.js`:
 
+- `Transaction` class, with `constructor` setting `this.date` with a new instance of `Date`.
+- `dateFormat` uses the moment library to format the date as "dd/mm/yyyy" (manually formatting dates in JavaScript is a bit more fiddly compared to Ruby, moment is installed locally in `src/moment.min.js`).
+- `display` method returns a string interpolated with the `dateFormat` returned value.
+
+Green.
+
+- [ ] 4.2
+
+> As a Customer,  
+> So I know how much each deposit was,  
+> I want deposits on my statement to have the credit amount.
+
+Wrote a test for initialising a constructing object with a credit value, the `display` method should include that value in the second column of the returned string
 
 <!-- Links -->
 
 [source]: https://github.com/makersacademy/course/blob/master/individual_challenges/bank_tech_test.md
+[Jasmine]: https://jasmine.github.io/index.html
+[Moment.js]: https://momentjs.com/

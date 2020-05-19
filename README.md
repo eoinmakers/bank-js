@@ -15,7 +15,7 @@ It allows you to create an account, deposit funds into it, withdraw funds from i
   - [Domain Modelling](#domain-modelling)
   - [User Stories](#user-stories)
   - [Set up](#set-up)
-  - [First Feature Test](#first-feature-test)
+  - [Deposits](#deposits)
 
 ## Spec
 
@@ -57,13 +57,13 @@ CRC modelling:
 
 ### User Stories
 
-- [ ] 1
+- [x] 1
 
 > As a Bank Manager,  
 > So that we only take customers money,  
 > I want accounts to start with balance 0
 
-- [ ] 2
+- [x] 2
 
 > As a Customer,  
 > So I can keep my money safe,  
@@ -123,7 +123,19 @@ Installed Jasmine, a JS browser testing framework.
 
 Stripped out Jasmine example files.
 
-### First Feature Test
+### Deposits
+
+- [x] 1
+
+> As a Bank Manager,  
+> So that we only take customers money,  
+> I want accounts to start with balance 0
+
+- [x] 2
+
+> As a Customer,  
+> So I can keep my money safe,  
+> I want to be able to deposit into my account
 
 In `spec/accountSpec.js` wrote a test for an `Account` class, with a `deposit` method taking 100 results in a string showing deposited 100 and  balance of 100. Red.
 
@@ -163,7 +175,9 @@ Refactors:
 
 - Extracted the operations used in `displayCredit` and `displayBalance` to a separate method, `asPounds`.
 - Extracted the operation used to convert the amount to pence into a new method, `toPence`.
-- Moved the extracted methods to their own file, `src/conversions.js`.
+- Moved the extracted methods to their own file, `src/conversion.js`.
+
+
 
 <!-- Links -->
 

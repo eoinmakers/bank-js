@@ -118,6 +118,8 @@ CRC modelling:
 
 ### Set up
 
+Installed Jasmine, a JS browser testing framework.
+
 
 
 <!-- Links -->

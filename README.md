@@ -263,13 +263,14 @@ Wrote a test for constructing a transaction object with a credit value, its `dis
 
 Green.
 
-Wrote a test for constructing a transaction object with a credit value of null and second argument for debit, its `display` method should include the debit value in the second column of the returned string. Red.
+Wrote a test for constructing a transaction object with a credit value of null and second argument for debit, its `display` method should include the debit value in the third column of the returned string. Red.
 
 - `constructor`'s second argument is debit, defaulting to null, assigned to `this.debit`.
 - `display` interpolates in the third column `render` of `this.debit`.
 
 Green.
 
+Wrote a test for constructing a transaction object with a credit value of null, a debit value of null, and a third argument for balance, its `display` method should include the balance value in the fourth column of the returned string. Red.
 
 
 <!-- Links -->

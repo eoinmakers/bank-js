@@ -20,6 +20,7 @@ It allows you to create an account, deposit funds into it, withdraw funds from i
   - [Withdrawals](#withdrawals)
   - [Statement](#statement)
   - [Transactions](#transactions)
+  - [Back to the Statement](#back-to-the-statement)
 
 ## Spec
 
@@ -103,19 +104,19 @@ CRC modelling:
 > So I know when each transaction happened,  
 > I want transactions on my statement to have the date
 
-- [ ] 4.2
+- [x] 4.2
 
 > As a Customer,  
 > So I know how much each deposit was,  
 > I want deposits on my statement to have the credit amount.
 
-- [ ] 4.3
+- [x] 4.3
 
 > As a Customer,  
 > So I know how much each withdrawal was,  
 > I want withdrawals on my statement to have the debit amount.
 
-- [ ] 4.4
+- [x] 4.4
 
 > As a Customer,  
 > So can keep track of my balance,  
@@ -249,7 +250,7 @@ In `src/transaction.js`:
 
 Green.
 
-- [ ] 4.2
+- [x] 4.2
 
 > As a Customer,  
 > So I know how much each deposit was,  
@@ -263,12 +264,24 @@ Wrote a test for constructing a transaction object with a credit value, its `dis
 
 Green.
 
+- [x] 4.3
+
+> As a Customer,  
+> So I know how much each withdrawal was,  
+> I want withdrawals on my statement to have the debit amount.
+
 Wrote a test for constructing a transaction object with a credit value of null and second argument for debit, its `display` method should include the debit value in the third column of the returned string. Red.
 
 - `constructor`'s second argument is debit, defaulting to null, assigned to `this.debit`.
 - `display` interpolates in the third column `render` of `this.debit`.
 
 Green.
+
+- [x] 4.4
+
+> As a Customer,  
+> So can keep track of my balance,  
+> I want transactions on my statement to have the balance amount after the transaction was completed.
 
 Wrote a test for constructing a transaction object with a credit value of null, a debit value of null, and a third argument for balance, its `display` method should include the balance value in the fourth column of the returned string. Red.
 
@@ -282,6 +295,13 @@ Refactors:
 - The display method has a lot of duplication or columns in a long string interpolation, which also doesn't read very well any way you try to format it. Changed this to an array with each of the elements as a `render` call, joined with a delimiter of "|| " for the columns.
 - Tweaked the `dateFormat` method to add a single trailing space also.
 - Having to pass in "null, 10000, 10000" to the `constructor` could lead to errors. Changed for an object as argument, using destructuring to fill in any missing keys with null.
+
+### Back to the Statement
+
+To pass the feature test:
+
+- The `Account` class can have `Transaction` injected into it, its `constructor taking the . 
+
 
 <!-- Links -->
 

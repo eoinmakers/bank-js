@@ -272,6 +272,10 @@ Green.
 
 Wrote a test for constructing a transaction object with a credit value of null, a debit value of null, and a third argument for balance, its `display` method should include the balance value in the fourth column of the returned string. Red.
 
+- `constructor`'s third argument is valance, defaulting to null, assigned to `this.balance`.
+- `display` interpolates in the fourth column `render` of `this.balance`.
+
+Green.
 
 <!-- Links -->
 

@@ -13,7 +13,7 @@ class Transaction {
       this.render(this.credit)
     }|| ${
       this.render(this.debit)
-    }||  ${
+    }|| ${
       this.render(this.balance)
     }`;
   }

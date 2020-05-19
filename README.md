@@ -147,6 +147,24 @@ Wrote test for `deposit` method taking 200 then 100 results in a string showing 
 
 Green.
 
+Wrote test for `deposit` method taking 10.50, should in a string showing deposited 10.50 and balance of 10.50. Red.
+
+The balance should probably be stored as pence, rather than as a float, but it needs to be display at two decimal places as if it were pounds and pence.
+
+- Let `credit` in `deposit` be the amount passed multiplied by 100 (to get pence value).
+- Added `credit` to the balance.
+- let `displayCredit` assigned with parseFloat of credit / 100, toFixed 2 decimal places.
+- Similarly let `displayBalance` convert to 2 decimal places.
+- Then interpolate `displayCredit` and `displayBalance` into the returned string.
+
+Green.
+
+Refactors:
+
+- Extracted the operations used in `displayCredit` and `displayBalance` to a separate method, `asPounds`.
+- Extracted the operation used to convert the amount to pence into a new method, `toPence`.
+- 
+
 <!-- Links -->
 
 [source]: https://github.com/makersacademy/course/blob/master/individual_challenges/bank_tech_test.md

@@ -1,11 +1,18 @@
 class Transaction {
-  constructor(credit = null) {
+  constructor(credit = null, debit = null) {
     this.date = new Date();
     this.credit = credit;
+    this.debit = debit;
   }
 
   display() {
-    return `${this.dateFormat()} || ${this.render(this.credit)}|| || `;
+    return `${
+      this.dateFormat()
+    } || ${
+      this.render(this.credit)
+    }|| ${
+      this.render(this.debit)
+    }|| `;
   }
 
   dateFormat() {

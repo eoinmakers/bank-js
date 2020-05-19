@@ -120,7 +120,7 @@ CRC modelling:
 
 Installed Jasmine, a JS browser testing framework.
 
-
+Stripped out Jasmine example files.
 
 <!-- Links -->
 

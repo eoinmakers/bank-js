@@ -17,6 +17,7 @@ It allows you to create an account, deposit funds into it, withdraw funds from i
   - [Set up](#set-up)
   - [Deposits](#deposits)
   - [Withdrawals](#withdrawals)
+  - [Statement](#statement)
 
 ## Spec
 
@@ -209,6 +210,18 @@ Wrote test for withdrawing 1500 from an account with 1000, string returned shoul
 - Added guard clause to check if the amount to be withdrawn is greater than the current balance, if so return the string.
 
 Green.
+
+### Statement
+
+- [ ] 4
+
+> As a Customer,  
+> So I can keep on top of my finances,  
+> I want to be able to print my account statement
+
+In `spec/accountFeatureSpec.js` wrote a feature test similar to the above acceptance criteria, using jasmine clock to mock the date. Red.
+
+
 
 <!-- Links -->
 

@@ -7,7 +7,7 @@ describe("Transaction", () => {
 
       const transaction = new Transaction();
 
-      expect(transaction.display).toEqual("19/05/2020 || || || ");
+      expect(transaction.display()).toEqual("19/05/2020 || || || ");
 
       jasmine.clock().uninstall();
     });

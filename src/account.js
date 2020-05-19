@@ -15,9 +15,7 @@ class Account {
     let credit = toPence(amount);
     this.balance += credit;
     this.addTransaction({ credit: credit, balance: this.balance });
-    return `${asPounds(credit)} deposited. Current balance: ${asPounds(
-      this.balance
-    )}`;
+    return this.transactionMessage(credit, "deposited");
   }
 
   withdraw(amount) {
@@ -26,9 +24,13 @@ class Account {
 
     this.balance -= debit;
     this.addTransaction({ debit: debit, balance: this.balance });
-    return `${asPounds(debit)} withdrawn. Current balance: ${asPounds(
-      this.balance
-    )}`;
+    return this.transactionMessage(debit, "withdrawn");
+  }
+
+  transactionMessage(amount, action) {
+    let currentBalance = asPounds(this.balance)
+    let pounds = asPounds(amount);
+    return `${pounds} ${action}. Current balance: ${currentBalance}`;
   }
 
   statement() {

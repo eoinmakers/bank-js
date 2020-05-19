@@ -339,6 +339,9 @@ Rather than returning a concatenated string, the printer should log it to the co
 - `StatementPrinter`'s `print` method console logs instead of returning.
 - `Account`'s `statement` method no longer needs to return the call, it just calls `StatementPrinter`'s `print`.
 
+Also:
+
+- Extracted a method `transactionMessage` from withdraw and amount to handle the `asPounds` conversion of the credit/debit and balance for input into the transaction message string.
 <!-- Links -->
 
 [source]: https://github.com/makersacademy/course/blob/master/individual_challenges/bank_tech_test.md

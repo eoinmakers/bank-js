@@ -91,6 +91,19 @@ describe("Account", () => {
       expect(mockContainer.Mock).toHaveBeenCalledTimes(2);
     });
   });
+
+  describe("uses StatementPrinter class", () => {
+    it("statement calls StatementPrinter.print", () => {
+      let Mock = {
+          print: function(){}
+      };
+      spyOn(Mock, "print");
+      const account = new Account(Transaction, Mock);
+
+      account.statement()
+      expect(Mock.print).toHaveBeenCalled();
+    });
+  });
 });
 
 function accountWith1000Deposited() {

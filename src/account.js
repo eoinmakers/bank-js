@@ -10,6 +10,7 @@ class Account {
   deposit(amount) {
     let credit = toPence(amount);
     this.balance += credit;
+    this.addTransaction({credit: credit, balance: this.balance}) 
     return `${asPounds(credit)} deposited. Current balance: ${asPounds(
       this.balance
     )}`;
@@ -23,5 +24,10 @@ class Account {
     return `${asPounds(debit)} withdrawn. Current balance: ${asPounds(
       this.balance
     )}`;
+  }
+
+  addTransaction(obj) {
+    const transaction = new this.transactionClass(obj);
+    this.transactionHistory.unshift(transaction)
   }
 }

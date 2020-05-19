@@ -196,6 +196,11 @@ Wrote test for withdrawing 200 from an account with 1000, returned string has ba
 
 - In `withdraw` implement similar functionality to deposit, however in this case deduct the debited amount from the balance.
 
+Wrote test for withdrawing 100 then 200 from an account with 1000, returned string has balance: 700.00. It is already green.
+
+
+
+
 <!-- Links -->
 
 [source]: https://github.com/makersacademy/course/blob/master/individual_challenges/bank_tech_test.md

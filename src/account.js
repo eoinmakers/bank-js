@@ -18,5 +18,6 @@ class Account {
     this.balance -= debit;
     return `${asPounds(debit)} withdrawn. Current balance: ${asPounds(
       this.balance
-    )}`;  }
+    )}`;
+  }
 }

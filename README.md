@@ -324,7 +324,15 @@ Green.
 
 _Again, I would have tested this injection, though I have found no documentation on how to test this with Jasmine._
 
+Refactors:
 
+Rather than returning a concatenated string, the printer should log it to the console.
+
+- Adjusted the feature test to spy on `console`'s `log` method, expecting it to be called with the prepared `statement`.
+- `StatementPrinter`'s `print` method console logs instead of returning.
+- `Account`'s `statement` method no longer needs to return the call, it just calls `StatementPrinter`'s `print`.
+
+- 
 <!-- Links -->
 
 [source]: https://github.com/makersacademy/course/blob/master/individual_challenges/bank_tech_test.md

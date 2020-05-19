@@ -299,16 +299,23 @@ Refactors:
 
 ### Back to the Statement
 
-To pass the feature test:
+Wrote a test that `deposit` calls for a new `Transaction`. Red,
 
 - The `Account` class can have `Transaction` injected into it.
 - The `constructor` takes an argument `transactionClass` defaulting to `Transaction`, assigned to `this.transactionClass`.
 - `this.transactionHistory` is assigned as an empty array.
 - the `addTransaction` method takes an object as argument, and created a transaction as a new `this.transactionClass` passing in the obj, then unshifts it onto the transaction history.
 - `deposit` calls `addTransaction` passing in an object with the credit and balance.
+
+Green.
+
+Wrote a test that `withdraw` calls for a new `Transaction`. Red,
+
 - `withdraw` calls `addTransaction` passing in ab object with the debit and balance.
 
-_I would have testing the injection however I could not for the life of me find any reference on how to spy on a constructor method using jasmine._
+Green.
+
+To pass the feature test:
 
 - The `Account` `statement` method includes a constant `STATEMENT_HEADER` assigned with the header string for the statement, ending in newline.
 - It then assigns `statementRows` by mapping through the `transactionHistory`, calling `display` on each transaction.
@@ -318,11 +325,11 @@ Green.
 
 ### Extracting a Statement Printer
 
+Wrote a test that `statement` calls `StatementPrinter.print`. Red.
+
 - Extracted the constant and logic from the `statement` method into a new class, `StatementPrinter`.
 - Its `constructor` sets `this.STATEMENT_HEADER` as the header string with newline.
 - Its `print` method takes any array of transactions, maps through them calling their `display` methods assigned to `rows`, then returns `this.STATEMENT_HEADER` concatenated with `rows` joined with newline characters.
-
-_Again, I would have tested this injection, though I have found no documentation on how to test this with Jasmine._
 
 Refactors:
 

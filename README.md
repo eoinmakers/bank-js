@@ -76,7 +76,7 @@ CRC modelling:
 > So I can spend my money,  
 > I want to be able to withdraw from my account
 
-- [ ] 3.1
+- [x] 3.1
 
 > As a Bank Manager,  
 > So we don't go out of pocket,  
@@ -198,7 +198,7 @@ Wrote test for withdrawing 200 from an account with 1000, returned string has ba
 
 Wrote test for withdrawing 100 then 200 from an account with 1000, returned string has balance: 700.00. It is already green as the borrowed code from `deposit` already implements this.
 
-- [ ] 3.1
+- [x] 3.1
 
 > As a Bank Manager,  
 > So we don't go out of pocket,  
@@ -206,6 +206,9 @@ Wrote test for withdrawing 100 then 200 from an account with 1000, returned stri
 
 Wrote test for withdrawing 1500 from an account with 1000, string returned should say "Insufficient funds".
 
+- Added guard clause to check if the amount to be withdrawn is greater than the current balance, if so return the string.
+
+Green.
 
 <!-- Links -->
 

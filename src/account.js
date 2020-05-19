@@ -15,6 +15,8 @@ class Account {
 
   withdraw(amount) {
     let debit = toPence(amount);
+    if (debit > this.balance) return "Insufficient funds";
+
     this.balance -= debit;
     return `${asPounds(debit)} withdrawn. Current balance: ${asPounds(
       this.balance

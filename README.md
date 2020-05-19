@@ -18,6 +18,7 @@ It allows you to create an account, deposit funds into it, withdraw funds from i
   - [Deposits](#deposits)
   - [Withdrawals](#withdrawals)
   - [Statement](#statement)
+  - [Transactions](#transactions)
 
 ## Spec
 
@@ -220,6 +221,18 @@ Green.
 > I want to be able to print my account statement
 
 In `spec/accountFeatureSpec.js` wrote a feature test similar to the above acceptance criteria, using jasmine clock to mock the date. Red.
+
+The best way to solve this feature is to implement a Transaction class.
+
+### Transactions
+
+- [ ] 4.1
+
+> As a Customer,  
+> So I know when each transaction happened,  
+> I want transactions on my statement to have the date
+
+In `spec/transactionSpec.js` wrote a test for the `display` method of the `Transaction` class to return a formatted string, with the formatted date in the first column. Red.
 
 
 

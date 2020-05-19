@@ -277,6 +277,11 @@ Wrote a test for constructing a transaction object with a credit value of null, 
 
 Green.
 
+Refactors:
+
+- The display method has a lot of duplication or columns in a long string interpolation, which also doesn't read very well any way you try to format it. Changed this to an array with each of the elements as a `render` call, joined with a delimiter of "|| " for the columns.
+- Tweaked the `dateFormat` method to add a single trailing space also.
+
 <!-- Links -->
 
 [source]: https://github.com/makersacademy/course/blob/master/individual_challenges/bank_tech_test.md

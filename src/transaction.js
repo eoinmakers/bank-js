@@ -7,19 +7,16 @@ class Transaction {
   }
 
   display() {
-    return `${
-      this.dateFormat()
-    } || ${
-      this.render(this.credit)
-    }|| ${
-      this.render(this.debit)
-    }|| ${
+    return [
+      this.dateFormat(),
+      this.render(this.credit),
+      this.render(this.debit),
       this.render(this.balance)
-    }`;
+    ].join("|| ")
   }
 
   dateFormat() {
-    return moment(this.date).format("DD/MM/YYYY");
+    return moment(this.date).format("DD/MM/YYYY ");
   }
 
   render(item) {

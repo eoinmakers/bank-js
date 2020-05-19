@@ -59,6 +59,14 @@ describe("Account", () => {
         "200.00 withdrawn. Current balance: 700.00"
       );
     });
+
+    it("1500 should return string 'Insufficient funds'", () => {
+      const account = accountWith1000Deposited();
+
+      expect(account.withdraw(1500)).toEqual(
+        "Insufficient funds"
+      );
+    });
   });
 });
 

@@ -70,7 +70,7 @@ CRC modelling:
 > So I can keep my money safe,  
 > I want to be able to deposit into my account
 
-- [ ] 3
+- [x] 3
 
 > As a Customer,  
 > So I can spend my money,  
@@ -180,7 +180,7 @@ Refactors:
 
 ### Withdrawals
 
-- [ ] 3
+- [x] 3
 
 > As a Customer,  
 > So I can spend my money,  
@@ -196,9 +196,15 @@ Wrote test for withdrawing 200 from an account with 1000, returned string has ba
 
 - In `withdraw` implement similar functionality to deposit, however in this case deduct the debited amount from the balance.
 
-Wrote test for withdrawing 100 then 200 from an account with 1000, returned string has balance: 700.00. It is already green.
+Wrote test for withdrawing 100 then 200 from an account with 1000, returned string has balance: 700.00. It is already green as the borrowed code from `deposit` already implements this.
 
+- [ ] 3.1
 
+> As a Bank Manager,  
+> So we don't go out of pocket,  
+> I want withdrawals to only be allowed to occur if the customer has sufficient funds
+
+Wrote test for withdrawing 1500 from an account with 1000, string returned should say "Insufficient funds".
 
 
 <!-- Links -->

@@ -14,8 +14,8 @@ class Account {
   deposit(amount) {
     let credit = toPence(amount);
     this.balance += credit;
-    this.addTransaction({ credit: credit, balance: this.balance });
-    return this.transactionMessage(credit, "deposited");
+    this._addTransaction({ credit: credit, balance: this.balance });
+    return this._transactionMessage(credit, "deposited");
   }
 
   withdraw(amount) {
@@ -23,11 +23,11 @@ class Account {
     if (debit > this.balance) return "Insufficient funds";
 
     this.balance -= debit;
-    this.addTransaction({ debit: debit, balance: this.balance });
-    return this.transactionMessage(debit, "withdrawn");
+    this._addTransaction({ debit: debit, balance: this.balance });
+    return this._transactionMessage(debit, "withdrawn");
   }
 
-  transactionMessage(amount, action) {
+  _transactionMessage(amount, action) {
     let currentBalance = asPounds(this.balance)
     let pounds = asPounds(amount);
     return `${pounds} ${action}. Current balance: ${currentBalance}`;
@@ -37,7 +37,7 @@ class Account {
     this.printer.print(this.transactionHistory);
   }
 
-  addTransaction(obj) {
+  _addTransaction(obj) {
     const transaction = new this.transactionClass(obj);
     this.transactionHistory.unshift(transaction);
   }

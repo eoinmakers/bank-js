@@ -8,18 +8,18 @@ class Transaction {
 
   display() {
     return [
-      this.dateFormat(),
-      this.render(this.credit),
-      this.render(this.debit),
-      this.render(this.balance)
+      this._dateFormat(),
+      this._render(this.credit),
+      this._render(this.debit),
+      this._render(this.balance)
     ].join("|| ")
   }
 
-  dateFormat() {
+  _dateFormat() {
     return moment(this.date).format("DD/MM/YYYY ");
   }
 
-  render(item) {
+  _render(item) {
     if (item != null) return asPounds(item) + " ";
     return "";
   }

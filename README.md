@@ -147,13 +147,13 @@ In `src/account.js`:
 
 Green.
 
-Wrote test for `deposit` method taking 200 results in a string showing deposited 200 and balance of 200. Red.
+Wrote test for `deposit` method taking 200 results in a string showing deposited 200.00 and balance of 200.00. Red.
 
 - `deposit` now checks for the amount, then if it is 200, return the relevant "200.00" string, else return the "100.00" string.
 
 Green.
 
-Wrote test for `deposit` method taking 200 then 100 results in a string showing deposited 100 and balance of 300. Red.
+Wrote test for `deposit` method taking 200 then 100 results in a string showing deposited 100.00 and balance of 300.00. Red.
 
 - Added `constructor` to `Account` initialising `balance` with constant `STARTING_BALANCE` set as 0.
 - `deposit` adds amount to balance, then interpolates the amount and new balance into a returned string.
@@ -186,7 +186,15 @@ Refactors:
 > So I can spend my money,  
 > I want to be able to withdraw from my account
 
-Wrote test for withdrawing 100 from an account with 1000, returned string has balance: 900
+Wrote test for withdrawing 100 from an account with 1000, returned string has balance: 900.00.
+
+- Added `withdraw` method, hardcoded returned string.
+
+Green.
+
+Wrote test for withdrawing 200 from an account with 1000, returned string has balance: 800.00.
+
+- In `withdraw` implement similar functionality to deposit, however in this case deduct the debited amount from the balance.
 
 <!-- Links -->
 

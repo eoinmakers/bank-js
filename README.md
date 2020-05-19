@@ -281,6 +281,7 @@ Refactors:
 
 - The display method has a lot of duplication or columns in a long string interpolation, which also doesn't read very well any way you try to format it. Changed this to an array with each of the elements as a `render` call, joined with a delimiter of "|| " for the columns.
 - Tweaked the `dateFormat` method to add a single trailing space also.
+- Having to pass in "null, 10000, 10000" to the `constructor` could lead to errors. Changed for an object as argument, using destructuring to fill in any missing keys with null.
 
 <!-- Links -->
 

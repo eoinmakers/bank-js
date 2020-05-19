@@ -300,7 +300,15 @@ Refactors:
 
 To pass the feature test:
 
-- The `Account` class can have `Transaction` injected into it, its `constructor taking the . 
+- The `Account` class can have `Transaction` injected into it.
+- The `constructor` takes an argument `transactionClass` defaulting to `Transaction`, assigned to `this.transactionClass`.
+- `this.transactionHistory` is assigned as an empty array.
+- the `addTransaction` method takes an object as argument, and created a transaction as a new `this.transactionClass` passing in the obj, then unshifts it onto the transaction history.
+- `deposit` calls `addTransaction` passing in an object with the credit and balance.
+- `withdraw` calls `addTransaction` passing in ab object with the debit and balance.
+
+_I would have testing the injection however I could not for the life of me find any reference on how to spy on a constructor method using jasmine._
+
 
 
 <!-- Links -->

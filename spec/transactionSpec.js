@@ -17,7 +17,6 @@ describe("Transaction", () => {
       jasmine.clock().install();
       jasmine.clock().mockDate(date);
 
-
       const transaction = new Transaction(10000);
 
       expect(transaction.display()).toEqual("19/05/2020 || 100.00 || || ");
@@ -30,7 +29,6 @@ describe("Transaction", () => {
       jasmine.clock().install();
       jasmine.clock().mockDate(date);
 
-
       const transaction = new Transaction(null, 10000);
 
       expect(transaction.display()).toEqual("19/05/2020 || || 100.00 || ");
@@ -42,7 +40,6 @@ describe("Transaction", () => {
       let date = new Date(2020, 4, 19);
       jasmine.clock().install();
       jasmine.clock().mockDate(date);
-
 
       const transaction = new Transaction(null, null, 10000);
 

@@ -125,7 +125,16 @@ Stripped out Jasmine example files.
 
 ### First Feature Test
 
-In `spec/accountSpec.js` wrote a test for an `Account` class, with a `deposit` method taking 100 results in a balance of 100. Red.
+In `spec/accountSpec.js` wrote a test for an `Account` class, with a `deposit` method taking 100 results in a string showing deposited 100 and  balance of 100. Red.
+
+In `src/account.js`:
+
+- Added `Account` class.
+- Added `deposit` function that returns the required string hardcoded.
+
+Green.
+
+Wrote test for `deposit` method taking 200 results in a string showing deposited 200 and balance of 200. Red.
 
 
 <!-- Links -->

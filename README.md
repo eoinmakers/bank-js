@@ -163,7 +163,7 @@ Refactors:
 
 - Extracted the operations used in `displayCredit` and `displayBalance` to a separate method, `asPounds`.
 - Extracted the operation used to convert the amount to pence into a new method, `toPence`.
-- 
+- Moved the extracted methods to their own file, `src/conversions.js`.
 
 <!-- Links -->
 

@@ -15,6 +15,7 @@ It allows you to create an account, deposit funds into it, withdraw funds from i
   - [Domain Modelling](#domain-modelling)
   - [User Stories](#user-stories)
   - [Set up](#set-up)
+  - [First Feature Test](#first-feature-test)
 
 ## Spec
 
@@ -121,6 +122,11 @@ CRC modelling:
 Installed Jasmine, a JS browser testing framework.
 
 Stripped out Jasmine example files.
+
+### First Feature Test
+
+In `spec/accountSpec.js` wrote a test for an `Account` class, with a `deposit` method taking 100 results in a balance of 100. Red.
+
 
 <!-- Links -->
 

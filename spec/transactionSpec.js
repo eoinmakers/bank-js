@@ -24,5 +24,18 @@ describe("Transaction", () => {
 
       jasmine.clock().uninstall();
     });
+
+    it("has the debit amount in third column", () => {
+      let date = new Date(2020, 4, 19);
+      jasmine.clock().install();
+      jasmine.clock().mockDate(date);
+
+
+      const transaction = new Transaction(null, 10000);
+
+      expect(transaction.display()).toEqual("19/05/2020 || || 100.00 || ");
+
+      jasmine.clock().uninstall();
+    });
   });
 });

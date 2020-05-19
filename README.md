@@ -255,7 +255,17 @@ Green.
 > So I know how much each deposit was,  
 > I want deposits on my statement to have the credit amount.
 
-Wrote a test for initialising a constructing object with a credit value, the `display` method should include that value in the second column of the returned string
+Wrote a test for constructing a transaction object with a credit value, its `display` method should include that value in the second column of the returned string. Red.
+
+- `Transaction` constructor takes an argument of credit defaulting to null, which is assigned to `this.credit`.
+- Added `render` method which takes an item, then if that is not nul returns `asPounds` passing in the item, concatenated with a trailing space.
+- `display` interpolates `render` of `this.credit`.
+
+Green.
+
+Wrote a test for constructing a transaction object with a credit value of null and second argument for debit, its `display` method should include the debit value in the second column of the returned string. Red.
+
+
 
 <!-- Links -->
 

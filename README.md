@@ -21,6 +21,7 @@ It allows you to create an account, deposit funds into it, withdraw funds from i
   - [Statement](#statement)
   - [Transactions](#transactions)
   - [Back to the Statement](#back-to-the-statement)
+  - [Extracting a Statement Printer](#extracting-a-statement-printer)
 
 ## Spec
 
@@ -309,7 +310,16 @@ To pass the feature test:
 
 _I would have testing the injection however I could not for the life of me find any reference on how to spy on a constructor method using jasmine._
 
+- The `Account` `statement` method includes a constant `STATEMENT_HEADER` assigned with the header string for the statement, ending in newline.
+- It then assigns `statementRows` by mapping through the `transactionHistory`, calling `display` on each transaction.
+- It then returns the `STATEMENT_HEADER` concatenated with `statementRows` joined with newline characters.
 
+Green.
+
+### Extracting a Statement Printer
+
+- Extracted the constant and logic from the `statement` method into a new class, `StatementPrinter`.
+- 
 
 <!-- Links -->
 

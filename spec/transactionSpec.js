@@ -17,7 +17,8 @@ describe("Transaction", () => {
       jasmine.clock().install();
       jasmine.clock().mockDate(date);
 
-      const transaction = new Transaction({credit: 10000});
+
+      const transaction = new Transaction(10000);
 
       expect(transaction.display()).toEqual("19/05/2020 || 100.00 || || ");
 

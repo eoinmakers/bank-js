@@ -136,6 +136,7 @@ Green.
 
 Wrote test for `deposit` method taking 200 results in a string showing deposited 200 and balance of 200. Red.
 
+- `deposit` now checks for the amount, then if it is 200, return the relevant "200.00" string, else return the "100.00" string.
 
 <!-- Links -->
 

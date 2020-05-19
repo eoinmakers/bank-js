@@ -24,5 +24,13 @@ describe("Account", () => {
         "100.00 deposited. Current balance: 300.00"
       );
     });
+
+    it("returns str with balance: 10.50 when passed 10.50", () => {
+      const account = new Account();
+
+      expect(account.deposit(10.50)).toEqual(
+        "10.50 deposited. Current balance: 10.50"
+      );
+    });
   });
 });

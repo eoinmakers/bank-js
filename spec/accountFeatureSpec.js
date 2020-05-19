@@ -2,7 +2,7 @@ describe("Account Feature", () => {
   it("deposit 1000, 2000 then withdraw 500", () => {
     jasmine.clock().install();
 
-    const dateOne = new Date(2012, 0, 12, 12);
+    const dateOne = new Date(2012, 0, 10, 12);
     const dateTwo = new Date(2012, 0, 13, 12);
     const dateThree = new Date(2012, 0, 14, 12);
 

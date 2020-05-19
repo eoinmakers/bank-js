@@ -24,7 +24,7 @@ describe("Account Feature", () => {
       "10/01/2012 || 1000.00 || || 1000.00 ",
     ].join("\n");
 
-    expect(account.statement).toEqual(statementOutput);
+    expect(account.statement()).toEqual(statementOutput);
 
     jasmine.clock().uninstall();
   });

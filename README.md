@@ -93,7 +93,7 @@ CRC modelling:
 > So we don't go out of pocket,  
 > I want withdrawals to only be allowed to occur if the customer has sufficient funds
 
-- [ ] 4
+- [x] 4
 
 > As a Customer,  
 > So I can keep on top of my finances,  
@@ -123,7 +123,7 @@ CRC modelling:
 > So can keep track of my balance,  
 > I want transactions on my statement to have the balance amount after the transaction was completed.
 
-- [ ] 4.5
+- [x] 4.5
 
 > As a Customer,  
 > Because more recent transactions are more important to me,  
@@ -223,7 +223,7 @@ Green.
 
 ### Statement
 
-- [ ] 4
+- [x] 4
 
 > As a Customer,  
 > So I can keep on top of my finances,  

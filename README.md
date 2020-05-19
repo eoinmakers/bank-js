@@ -138,6 +138,15 @@ Wrote test for `deposit` method taking 200 results in a string showing deposited
 
 - `deposit` now checks for the amount, then if it is 200, return the relevant "200.00" string, else return the "100.00" string.
 
+Green.
+
+Wrote test for `deposit` method taking 200 then 100 results in a string showing deposited 100 and balance of 300. Red.
+
+- Added `constructor` to `Account` initialising `balance` with constant `STARTING_BALANCE` set as 0.
+- `deposit` adds amount to balance, then interpolates the amount and new balance into a returned string.
+
+Green.
+
 <!-- Links -->
 
 [source]: https://github.com/makersacademy/course/blob/master/individual_challenges/bank_tech_test.md

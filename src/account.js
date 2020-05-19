@@ -29,7 +29,7 @@ class Account {
   }
 
   statement() {
-    return this.printer.print(this.transactionHistory);
+    this.printer.print(this.transactionHistory);
   }
 
   addTransaction(obj) {

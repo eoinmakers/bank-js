@@ -319,7 +319,11 @@ Green.
 ### Extracting a Statement Printer
 
 - Extracted the constant and logic from the `statement` method into a new class, `StatementPrinter`.
-- 
+- Its `constructor` sets `this.STATEMENT_HEADER` as the header string with newline.
+- Its `print` method takes any array of transactions, maps through them calling their `display` methods assigned to `rows`, then returns `this.STATEMENT_HEADER` concatenated with `rows` joined with newline characters.
+
+_Again, I would have tested this injection, though I have found no documentation on how to test this with Jasmine._
+
 
 <!-- Links -->
 

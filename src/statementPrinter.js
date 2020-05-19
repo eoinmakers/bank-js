@@ -4,6 +4,6 @@ class StatementPrinter {
   }
   print(transactionArray) {
     let rows = transactionArray.map(transaction => transaction.display());
-    return this.STATEMENT_HEADER + rows.join("\n");
+    console.log(this.STATEMENT_HEADER + rows.join("\n"));
   }
 }

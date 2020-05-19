@@ -1,10 +1,13 @@
 class Account {
-  constructor(transactionClass = Transaction, printer = new StatementPrinter) {
+  constructor(
+    transactionClass = Transaction,
+    printer = new StatementPrinter()
+  ) {
     const STARTING_BALANCE = 0;
 
     this.balance = STARTING_BALANCE;
     this.transactionClass = transactionClass;
-    this.printer = printer
+    this.printer = printer;
     this.transactionHistory = [];
   }
 

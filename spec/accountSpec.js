@@ -63,10 +63,22 @@ describe("Account", () => {
     it("1500 should return string 'Insufficient funds'", () => {
       const account = accountWith1000Deposited();
 
-      expect(account.withdraw(1500)).toEqual(
-        "Insufficient funds"
-      );
+      expect(account.withdraw(1500)).toEqual("Insufficient funds");
     });
+  });
+
+  describe("uses Transaction class", () => {
+    it("deposit calls for new Transaction", () => {
+      let mockObj = {
+        Mock: function () {},
+      };
+      spyOn(mockObj, "Mock");
+      const account = new Account(mockObj.Mock);
+
+      account.deposit(100);
+      expect(mockObj.Mock).toHaveBeenCalled();
+    });
+
   });
 });
 
@@ -75,4 +87,3 @@ function accountWith1000Deposited() {
   account.deposit(1000);
   return account;
 }
-

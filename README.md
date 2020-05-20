@@ -66,7 +66,7 @@ date || credit || debit || balance
 | -------------------------- | -------------------------------------------------------------------------------------------------- |
 | `account.deposit(number)`  | deposit however much you want into your account, this figure is in pounds with pence as decimals.  |
 | `account.withdraw(number)` | withdraw however much you want from your account, this figure is in pounds with pence as decimals. |
-| `account.statement()`        | prints a statement of all transactions so far                                                      |
+| `account.statement()`      | prints a statement of all transactions so far                                                      |
 
 You should see something similar to the below:
 

@@ -11,6 +11,7 @@ It allows you to create an account, deposit funds into it, withdraw funds from i
   - [Requirements](#requirements)
   - [Acceptance criteria](#acceptance-criteria)
 - [Quick Start](#quick-start)
+- [Screen Preview](#screen-preview)
 - [Dependencies](#dependencies)
 - [Development Journal](#development-journal)
   - [Domain Modelling](#domain-modelling)
@@ -49,7 +50,29 @@ date || credit || debit || balance
 
 ## Quick Start
 
-_Coming soon_
+1. Clone this repo.
+2. Open `SpecRunner.html` in your browser.
+3. Inspect the tests.
+4. Open your browser console.
+5. Set up your account with:
+
+   ```js
+   let account = new Account()
+   ```
+
+6. Use the account with the following methods:
+
+| Method                     | Description                                                                                        |
+| -------------------------- | -------------------------------------------------------------------------------------------------- |
+| `account.deposit(number)`  | deposit however much you want into your account, this figure is in pounds with pence as decimals.  |
+| `account.withdraw(number)` | withdraw however much you want from your account, this figure is in pounds with pence as decimals. |
+| `account.statement()`        | prints a statement of all transactions so far                                                      |
+
+You should see something similar to the below:
+
+## Screen Preview
+
+![Screen preview](images/jsconsole-bank.png)
 
 ## Dependencies
 
@@ -149,7 +172,7 @@ Stripped out Jasmine example files.
 > So I can keep my money safe,  
 > I want to be able to deposit into my account
 
-In `spec/accountSpec.js` wrote a test for an `Account` class, with a `deposit` method taking 100 results in a string showing deposited 100 and  balance of 100. Red.
+In `spec/accountSpec.js` wrote a test for an `Account` class, with a `deposit` method taking 100 results in a string showing deposited 100 and balance of 100. Red.
 
 In `src/account.js`:
 
@@ -342,10 +365,10 @@ Rather than returning a concatenated string, the printer should log it to the co
 Also:
 
 - Extracted a method `transactionMessage` from withdraw and amount to handle the `asPounds` conversion of the credit/debit and balance for input into the transaction message string.
-- Prepend "_" to name of methods that should be private.
+- Prepend "\_" to name of methods that should be private.
 
 <!-- Links -->
 
 [source]: https://github.com/makersacademy/course/blob/master/individual_challenges/bank_tech_test.md
-[Jasmine]: https://jasmine.github.io/index.html
-[Moment.js]: https://momentjs.com/
+[jasmine]: https://jasmine.github.io/index.html
+[moment.js]: https://momentjs.com/

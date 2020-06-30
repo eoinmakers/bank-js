@@ -4,6 +4,8 @@
 This is a small project to practice maintaining code quality and process. [Source]
 
 This is a reimplementation of my previous Ruby implementation, [available here](https://github.com/hturnbull93/bank/).
+In addition to this browser versuib have also created a JavaScript implementation in [node](https://github.com/hturnbull93/bank-node/).
+I have also made a Python implementation, [available here](https://github.com/hturnbull93/bank-py/).
 
 It allows you to create an account, deposit funds into it, withdraw funds from it, and print statements.
 
